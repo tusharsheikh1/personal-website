@@ -4,12 +4,12 @@ import ResumeButton from '@/components/ResumeButton';
 import { ArrowRight, TrendingUp, Lightbulb, Code2, Rocket, Users, Trophy } from 'lucide-react';
 
 export default function Home() {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState<string>('');
   const text = "Frontend Developer • AI Explorer • Content Creator";
   const speed = 50;
 
   useEffect(() => {
-    let index = 0;
+    let index: number = 0;
     const interval = setInterval(() => {
       setTitle(text.slice(0, index));
       index++;
@@ -26,7 +26,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="space-y-6 relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-          Hi, I'm <span className="text-blue-600 dark:text-blue-400">Tushar Sheikh</span>
+          Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Tushar Sheikh</span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 h-8 font-mono">{title}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -66,7 +66,7 @@ export default function Home() {
       <div className="max-w-4xl text-center mt-20 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">My Mission</h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-          My goal is to build seamless digital experiences that feel effortless yet powerful. Whether it's a portfolio site, a team dashboard, or an AI-powered tool — I aim to create with intention, clarity, and empathy.
+          My goal is to build seamless digital experiences that feel effortless yet powerful. Whether it&apos;s a portfolio site, a team dashboard, or an AI-powered tool — I aim to create with intention, clarity, and empathy.
         </p>
       </div>
 
